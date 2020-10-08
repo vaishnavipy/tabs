@@ -1,3 +1,5 @@
+
+window.onload = function(){
 let content; let active_btns;
 let my_btns = document.getElementsByTagName("BUTTON");
 [...my_btns].forEach(elm => elm.addEventListener("click",myFunc));
@@ -113,4 +115,4 @@ active_btns = document.getElementsByTagName("BUTTON");
 
 }
 
-
+}
