@@ -80,6 +80,7 @@
           border:none;
           cursor: pointer;
           display: inline-block;
+        
           
         
         }
@@ -99,14 +100,17 @@
             background-color: white;
         }
 
+        .not_active{
+            background-color: #DAE2EC;
+        }
         #goals{
 
             border-top-right-radius: 20px;
-            background-color: #DAE2EC;
+           
             
         }
         #vision{
-            background-color: #DAE2EC;
+           
         }
         .content{
             font-size: 17px;
@@ -162,8 +166,8 @@
             <div id="tab_container">
 
                <button id="history" class="active">History</button>
-                <button id="vision">Vision</button>
-                <button id="goals">Goals</button>
+                <button id="vision" class="not_active">Vision</button>
+                <button id="goals" class="not_active">Goals</button>
                 <div class="content" id="history_content">
 
                     <h4 class="title">History<h4>
@@ -210,8 +214,118 @@
 
 
         <script>
+            let content; let active_btns;
+            let my_btns = document.getElementsByTagName("BUTTON");
+           [...my_btns].forEach(elm => elm.addEventListener("click",myFunc));
+
+            function myFunc(){
+            active_btns = document.getElementsByTagName("BUTTON");
+
+               
+               if(this.id == "history"){
+                console.log(this.id)
+                this.classList.remove("not_active");
+                this.classList.add("active");
+
+                [...active_btns].forEach(elm => {
+
+                    if(this.id != "history"){
+                        this.classList.remove("active");
+                        this.classList.add("not_active")   
+                    }
+                    })
+
+               
+
+               content = document.querySelectorAll(".content");
+               content.forEach(elm => {
+
+                if(elm.id == "history_content"){
+
+                    return elm.style.display = "block";
+                }else{
+
+                     elm.style.display = "none";  
+                }
+
+               })
 
 
+
+               }
+               if(this.id == "vision"){
+                console.log(this.id)
+                this.classList.remove("not_active");
+                this.classList.add("active");
+
+                [...active_btns].forEach(elm => {
+
+                    if(this.id != "vision"){
+                        this.classList.remove("active");
+                        this.classList.add("not_active")   
+                    }
+                    })
+
+
+
+
+               content = document.querySelectorAll(".content");
+               content.forEach(elm => {
+
+                if(elm.id == "vision_content"){
+
+                    return elm.style.display = "block";
+                }else{
+
+                     elm.style.display = "none";  
+                }
+
+               })
+
+
+
+               }
+               if(this.id == "goals"){
+                console.log(this.id)
+                this.classList.remove("not_active");
+                this.classList.add("active");
+
+                    [...active_btns].forEach(elm => {
+
+                    if(this.id != "goals"){
+                        this.classList.remove("active");
+                        this.classList.add("not_active")   
+                    }
+                    })
+
+
+
+               content = document.querySelectorAll(".content");
+               content.forEach(elm => {
+
+                if(elm.id == "goals_content"){
+
+                    return elm.style.display = "block";
+                }else{
+
+                     elm.style.display = "none";  
+                }
+
+               })
+
+
+
+               }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            }
 
 
 
