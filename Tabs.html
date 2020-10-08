@@ -1,0 +1,224 @@
+
+
+
+<html>
+
+    <head>
+    
+    
+        <title>SideBar JavaScript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  <link rel="stylesheet" href="reviews.css"> 
+       <script src="reviews.js"></script>  --> 
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/031e3862f6.js"></script>
+
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+
+          body{
+              background-color: #F1F5F8;
+          }
+          #container{
+              text-align: center;
+          }
+
+          #container h1{
+            font-family: 'Roboto', sans-serif;
+              color:#102A42;
+              padding: 0;
+              margin: 0;
+              padding-top: 90px;
+              font-size: 50px;
+          }
+          #container p{
+              margin: 0;
+              padding: 0;
+            color:#617D98;
+            font-size: 20px;
+          }
+          #flex_container{
+              display: grid;
+             grid-template-columns: 40% 40%;
+             grid-column-gap: 30px;
+             padding-top:40px ;
+             
+             justify-content: center;
+              
+              }
+        #image{
+           
+           
+           
+      
+         
+            
+        }
+        #image img{
+            width:100%;
+            height: auto;
+            border-radius: 20px;
+          
+        }
+        #tab_container{
+            
+            background-color:white;
+            border-radius: 20px;
+            font-size: 0;
+            position: relative;
+           
+        }
+        #tab_container button{
+          font-size: 22px;
+         
+          width:33.3%;
+          outline: 0px;
+          padding: 10px 5px;
+          border:none;
+          cursor: pointer;
+          display: inline-block;
+          
+        
+        }
+        #tab_container button:hover:not(.active){
+           color:skyblue;
+           background-color: lightcyan;
+
+            
+            }
+
+        #history{
+            border-top-left-radius: 20px;
+            
+
+        }
+        .active{
+            background-color: white;
+        }
+
+        #goals{
+
+            border-top-right-radius: 20px;
+            background-color: #DAE2EC;
+            
+        }
+        #vision{
+            background-color: #DAE2EC;
+        }
+        .content{
+            font-size: 17px;
+            color:#617D98;
+            padding-top: 30px;
+            padding: 15px;
+            text-align: left;
+            font-weight: 100;
+            font-family: sans-serif;
+            letter-spacing: 2px;
+        }
+        .title{
+
+            color:#102A42;
+            letter-spacing: 3px;
+        }
+       
+        #history_content{
+            position: absolute;
+           top:25px;
+
+        }
+        #vision_content{
+            display: none;
+            position: absolute;
+            top:25px;
+            
+        }
+        #goals_content{
+            display: none;
+            position: absolute;
+            top:25px;
+            
+        }
+
+        </style>
+        
+    
+        
+    </head>
+
+
+    <body>
+        <div id="container">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, aperiam!</p>
+            <div id="flex_container">
+                <div id="image">
+                   <img src="https://vannilla-js-basic-project-11-tabs.netlify.app/hero-bcg.jpeg"> 
+                </div>
+
+           
+            <div id="tab_container">
+
+               <button id="history" class="active">History</button>
+                <button id="vision">Vision</button>
+                <button id="goals">Goals</button>
+                <div class="content" id="history_content">
+
+                    <h4 class="title">History<h4>
+                    I'm baby wolf pickled schlitz try-hard normcore marfa man
+                     bun mumblecore vice pop-up XOXO lomo kombucha glossier bicycle rights. 
+                     Umami kinfolk salvia jean shorts offal venmo. Knausgaard tilde try-hard, 
+                     woke fixie banjo man bun. Small batch tumeric mustache tbh wayfarers 8-bit shaman chartreuse tacos. 
+                     Viral direct trade hoodie ugh chambray, craft beer pork belly flannel tacos single-origin coffee art party migas plaid pop-up.
+
+                </div>
+
+                <div class="content" id="vision_content">
+
+                    <h4 class="title">Vision<h4>
+                        Man bun PBR&B keytar copper mug prism, hell of helvetica. 
+                        Synth crucifix offal deep v hella biodiesel. Church-key listicle polaroid put a 
+                        bird on it chillwave palo santo enamel pin, tattooed meggings franzen la croix cray. 
+                        Retro yr aesthetic four loko tbh helvetica air plant, neutra palo santo tofu mumblecore. 
+                        Hoodie bushwick pour-over jean shorts chartreuse shabby chic. Roof party hammock master
+                         cleanse pop-up truffaut, bicycle rights skateboard affogato readymade sustainable deep v 
+                         live-edge schlitz narwhal.
+
+                </div>
+
+                <div class="content" id="goals_content">
+
+                    <h4 class="title">Goals<h4>
+                        Chambray authentic truffaut, kickstarter brunch taxidermy vape heirloom 
+                        four dollar toast raclette shoreditch church-key. Poutine etsy tote bag, cred fingerstache
+                         leggings cornhole everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk swag,
+                          mixtape hashtag marfa readymade direct trade man braid cold-pressed roof party. 
+                          Small batch adaptogen coloring book heirloom. Letterpress food truck hammock literally hell of wolf beard adaptogen everyday carry.
+                         Dreamcatcher pitchfork yuccie, banh mi salvia venmo photo booth quinoa chicharrones.
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        </div>
+        
+
+
+        <script>
+
+
+
+
+
+        </script>
+        
+   
+    </body>
+
+
+</html>
